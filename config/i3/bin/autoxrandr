@@ -1,0 +1,27 @@
+#!/bin/bash
+
+lvds='eDP-1'
+
+for monitor in $(xrandr | grep '\Wdisconnected' | awk '{ print $1 }'); do
+    xrandr --output $monitor --off
+done
+
+for output in $(xrandr | grep '\Wconnected' | awk '{ print $1 }'); do
+    if [[ ! $output = 'eDP-1' ]]; then
+        killall -q polybar
+        xrandr --output $lvds --auto --output $output --pos 0x0 --auto \
+              --right-of $lvds --primary
+        polybar -r main & polybar -r left &
+        echo "killall -q polybar
+        xrandr --output $lvds --auto --output $output --pos 0x0 --auto \
+              --right-of $lvds --primary
+        polybar -r main & polybar -r left &"
+    else
+        killall -q polybar
+        xrandr --output $lvds --auto --primary
+        polybar -r left &
+        echo "killall -q polybar
+        xrandr --output $lvds --auto --primary
+        polybar -r left &"
+    fi
+done
