@@ -2,6 +2,7 @@
 
 stow = cd config && stow -v -t ~
 
+
 install: 
 	xargs -a packages/packages.list sudo apt-get install -y
 	curl -fLo ~/.local/share/nvim/site/autoload/plug.vim \
