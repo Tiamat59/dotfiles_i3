@@ -1,6 +1,5 @@
 stow
-ttf-freefont
-ttf-google-fonts
+fonts-freefont-ttf
 vim
 neovim
 wget

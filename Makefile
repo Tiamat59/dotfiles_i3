@@ -1,4 +1,4 @@
-.PHONY install conf installi3 confi3
+.PHONY: install conf installi3 confi3
 
 stow = cd config && stow -v -t ~
 
