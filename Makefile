@@ -17,7 +17,6 @@ conf:
 	$(stow) nvim
 	nvim +PlugInstall +q +q
 confi3:
-	$(stow) bin
 	$(stow) urxvt
 	xrdb ~/.Xresources
 	$(stow) i3
