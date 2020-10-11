@@ -1,7 +1,7 @@
 feh
-i3-wm
-i3-gaps-wm
+i3-gaps
 polybar
 rofi
 rxvt-unicode
 fonts-font-awesome
+picom

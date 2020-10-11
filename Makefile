@@ -17,11 +17,9 @@ conf:
 	$(stow) nvim
 	nvim +PlugInstall +q +q
 confi3:
-	$(stow) urxvt
 	xrdb ~/.Xresources
 	$(stow) i3
 	$(stow) polybar
-	$(stow) picom
 	$(stow) rofi
 
 
